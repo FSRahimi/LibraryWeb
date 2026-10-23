@@ -73,14 +73,6 @@ function AddBookPage() {
           aria-invalid={!!errors.author}
         />
         {errors.author && <p className="field-error"> {errors.author}</p>}
-        <label> Fate</label>
-        <input
-          id="fate"
-          name="fate"
-          value={form.fate}
-          onChange={handleChange}
-          aria-invalid={!!errors.author}
-        />
 
         <label htmlFor="year"> Year</label>
         <input
