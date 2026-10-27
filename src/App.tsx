@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 // Import library data
 import { books } from "./data/books";
 import OnlineBookExplorer from "./pages/OnlineBookExplorer";
+import LibraryStateLab from "./pages/LibraryStateLab";
 
 
 import AddBookPage from "./pages/AddBookPage";
@@ -21,7 +22,7 @@ import "./OnlineBookExplorer.css";
 function App() {
   // State 1: Store the search text
   const [search, setSearch] = useState<string>("");
-  const [currentPage, setCurrentPage] = useState<"library" | "online" | "add-book">("library");
+  const [currentPage, setCurrentPage] = useState<"library" | "online" | "add-book" | "state-lab">("library");
   /*
     NEW STATE: Available only filter
 
@@ -119,6 +120,14 @@ function App() {
         >
           Add New Book
         </button>
+
+        <button
+          type="button"
+          className={currentPage === "state-lab" ? "active" : ""}
+          onClick={() => setCurrentPage("state-lab")}
+        >
+          State Lab
+        </button>
       </nav>
 
       <main className="container">
@@ -149,7 +158,9 @@ function App() {
               </label>
 
               {/* Display number of matching books */}
-              <p className="result-count">Books Found: {filteredBooks.length}</p>
+              <p className="result-count">
+                Books Found: {filteredBooks.length}
+              </p>
 
               {/*
                 CONDITIONAL RENDERING WITH &&
@@ -173,8 +184,10 @@ function App() {
           </>
         ) : currentPage === "online" ? (
           <OnlineBookExplorer />
-        ) : (
+        ) : currentPage === "add-book" ? (
           <AddBookPage />
+        ) : (
+          <LibraryStateLab />
         )}
       </main>
 

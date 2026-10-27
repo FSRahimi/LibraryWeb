@@ -358,3 +358,149 @@ button:hover {
   color: #166534;
   margin-top: 15px;
 }
+
+
+
+/* Main State Lab page */
+.state-lab {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Search controls */
+.state-controls {
+  background: #eff6ff;
+  padding: 20px;
+  border-radius: 12px;
+  margin: 25px 0;
+}
+
+.state-controls > input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.state-controls label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Results grid */
+.state-book-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+/* Single book */
+.state-book {
+  background: white;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+}
+
+.state-book button {
+  margin-top: 10px;
+}
+
+.state-book-details {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+}
+
+/* Educational explanation */
+.state-explanation {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+
+/* Custom Hooks Lab page */
+.hooks-lab {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hooks-lab h2 {
+  color: #17395b;
+}
+
+/* Search label */
+.hooks-lab label {
+  display: block;
+  font-weight: bold;
+  margin: 20px 0 8px;
+}
+
+/* Search input */
+.hooks-search {
+  width: 100%;
+  max-width: 500px;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+/* Debounce explanation */
+.hooks-help {
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* Error message */
+.hooks-error {
+  color: #b91c1c;
+  padding: 15px;
+  background: #fef2f2;
+  border-radius: 8px;
+}
+
+/* Responsive books layout */
+.hooks-book-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Individual book */
+.hooks-book-card {
+  padding: 20px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+}
+
+.hooks-book-card h3 {
+  color: #17395b;
+}
+
+.hooks-book-card p {
+  color: #64748b;
+}
+
+/* Favorite button */
+.hooks-book-card button {
+  margin-top: 12px;
+  padding: 10px 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hooks-book-card button[aria-pressed="true"] {
+  background: #b45309;
+}
